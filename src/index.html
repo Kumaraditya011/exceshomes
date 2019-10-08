@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Exces Homes</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+    integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+    integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+    integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+
+
+
+ <!--====== Animate css ======-->
+ <link rel="stylesheet" href="assets/css/animate.css">
+
+ <!--====== Aos css ======-->
+ <link rel="stylesheet" href="assets/css/aos.css">
+
+ <!--====== Slick css ======-->
+ <link rel="stylesheet" href="assets/css/slick.css">
+
+  <!--====== Default css ======-->
+  <link rel="stylesheet" href="assets/css/default.css">
+
+
+ <!--====== Bootstrap css ======-->
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+  <!--====== Fontawesome css ======-->
+ <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+  <!--====== Style css ======-->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+
+  
+<link href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css" rel="stylesheet">
+
+
+
+<!--filter-->
+
+<script>
+    $(document).ready(function(){
+      $("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    </script>
+
+
+<!-- round circle -->
+<!-- <script>
+
+let i=2;
+
+	
+$(document).ready(function(){
+  var radius = 200;
+  var fields = $('.itemDot');
+  var container = $('.dotCircle');
+  var width = container.width();
+radius = width/2.5;
+
+   var height = container.height();
+  var angle = 0, step = (2*Math.PI) / fields.length;
+  fields.each(function() {
+    var x = Math.round(width/2 + radius * Math.cos(angle) - $(this).width()/2);
+    var y = Math.round(height/2 + radius * Math.sin(angle) - $(this).height()/2);
+    if(window.console) {
+      console.log($(this).text(), x, y);
+    }
+    
+    $(this).css({
+      left: x + 'px',
+      top: y + 'px'
+    });
+    angle += step;
+  });
+  
+  
+  $('.itemDot').click(function(){
+    
+    var dataTab= $(this).data("tab");
+    $('.itemDot').removeClass('active');
+    $(this).addClass('active');
+    $('.CirItem').removeClass('active');
+    $( '.CirItem'+ dataTab).addClass('active');
+    i=dataTab;
+    
+    $('.dotCircle').css({
+      "transform":"rotate("+(360-(i-1)*36)+"deg)",
+      "transition":"2s"
+    });
+    $('.itemDot').css({
+      "transform":"rotate("+((i-1)*36)+"deg)",
+      "transition":"1s"
+    });
+    
+    
+  });
+  
+  setInterval(function(){
+    var dataTab= $('.itemDot.active').data("tab");
+    if(dataTab>6||i>6){
+    dataTab=1;
+    i=1;
+    }
+    $('.itemDot').removeClass('active');
+    $('[data-tab="'+i+'"]').addClass('active');
+    $('.CirItem').removeClass('active');
+    $( '.CirItem'+i).addClass('active');
+    i++;
+    
+    
+    $('.dotCircle').css({
+      "transform":"rotate("+(360-(i-2)*36)+"deg)",
+      "transition":"2s"
+    });
+    $('.itemDot').css({
+      "transform":"rotate("+((i-2)*36)+"deg)",
+      "transition":"1s"
+    });
+    
+    }, 5000);
+  
+});
+</script>
+   -->
+
+   <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   ---- Include the above in your HEAD tag -------- -->
+
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+   <!-- <script>
+    AOS.init(null);
+  </script> -->
+</head>
+
+<body>
+  <app-root></app-root>
+</body>
+
+</html>
